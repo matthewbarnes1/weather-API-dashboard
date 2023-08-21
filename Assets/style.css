@@ -44,3 +44,7 @@ aside h3{
     border-bottom: 7px solid white;
     padding:0px;
 }
+
+footer{
+    bottom:0;
+}

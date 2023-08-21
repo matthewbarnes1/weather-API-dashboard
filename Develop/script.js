@@ -4,9 +4,21 @@ const btnInput = document.getElementById('search-button');
 
 btnInput.addEventListener('click', myFunction);
 
+var clickCount = 0;
+
 function myFunction() {
-    const city = document.getElementById('text-input').value;
-    // console.log(city);
+    var city = document.getElementById('text-input');
+
+        if(city.value.length == 0){
+            alert("ERROR: Input Required (City)");
+        }
+        else{
+            var city = document.getElementById('text-input').value;
+            console.log(city);
+            localStorage.setItem('cityName', city);
+            clickCount++;
+        }
+        console.log(clickCount);
 
         //TODO: Use city value to concatinate queryURL
 

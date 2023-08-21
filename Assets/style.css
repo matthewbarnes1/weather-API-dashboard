@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville&family=PT+Serif&family=Roboto+Slab:wght@100;400&display=swap');
+
+:root{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Slab', serif;
+    margin:0px;
+    border:0px;
+    padding:0px;
+    display:inline-block;
+    flex-wrap:wrap;
+}
+
+body{
+    margin:inherit;
+}
+
+
+header{
+    margin:0px;
+    text-align:center;
+}
+
+
+header  h1{
+    margin:0px;
+    text-align:center;
+    width:100%;
+    background-image: linear-gradient(to right, #004FF9, #FFF94C);
+
+}
+
+aside{
+    float:left;
+    margin:8px;
+    padding:4px;
+    border: 3px solid grey;
+    text-align:center;
+}
+
+aside h3{
+    margin:3px;
+    border-bottom: 7px solid white;
+    padding:0px;
+}

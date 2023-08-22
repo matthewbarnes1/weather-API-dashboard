@@ -65,9 +65,6 @@ function myFunction() {
         console.log(foreWinds);
         console.log(foreHumidity);
 
-        for (var i = 0; i < 5; i++) {
-            
-          }
 
       });
   }
@@ -75,6 +72,12 @@ function myFunction() {
   fetchWeather();
   fetchForecast();
 }
+
+// TODO: Upon search button click, save text input to local storage, and, create button element
+// TODO: Create working loop for 5-day-forecast cards
+// TODO: Style. It looks terrible rn.
+// TODO: Icon's dependant on the displayed weather (I think weather api has this)
+// TODO: Style again, again, and again.
 
 // * This function is applying the dayjs time api to html time element (refreshing every 1000ms)
 setInterval(function () {

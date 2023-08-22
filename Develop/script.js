@@ -47,7 +47,6 @@ function myFunction() {
     fetch(forecastUrl)
       .then((response) => response.json())
       .then((data) => {
-
         var foreDates = [];
         var foreTemps = [];
         var foreWinds = [];
@@ -65,43 +64,39 @@ function myFunction() {
         foreWinds[0];
         foreHumidity[0];
 
-
         console.log(foreDates);
         console.log(foreTemps);
         console.log(foreWinds);
         console.log(foreHumidity);
-
-
       });
   }
   var forecastUrl =
-  "http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
-  APIKey;
+    "http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
+    APIKey;
   fetch(forecastUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    var weatherCardsContainer = document.getElementById('weatherCards');
+    .then((response) => response.json())
+    .then((data) => {
+      var weatherCardsContainer = document.getElementById("weatherCards");
 
-    for (var i = 0; i < 5; i++) {
-      var date = data.list[i].dt_txt;
-      var temp = data.list[i].main.temp;
-      var wind = data.list[i].wind.speed;
-      var humidity = data.list[i].main.humidity;
+      for (var i = 0; i < 5; i++) {
+        var date = data.list[i].dt_txt;
+        var temp = data.list[i].main.temp;
+        var wind = data.list[i].wind.speed;
+        var humidity = data.list[i].main.humidity;
 
-      var card = document.createElement('div');
-      card.className = 'weatherCard';
+        var card = document.createElement("div");
+        card.className = "weatherCard";
 
-      card.innerHTML = `
+        card.innerHTML = `
         <h3>${date}</h3>
         <p>Temperature: ${temp}°C</p>
         <p>Wind Speed: ${wind} m/s</p>
         <p>Humidity: ${humidity}%</p>
       `;
 
-      weatherCardsContainer.appendChild(card);
-    }
-  });
-
+        weatherCardsContainer.appendChild(card);
+      }
+    });
 
   fetchWeather();
   fetchForecast();

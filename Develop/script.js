@@ -58,13 +58,16 @@ function myFunction() {
           foreTemps.push(data.list[i].main.temp);
           foreWinds.push(data.list[i].wind.speed);
           foreHumidity.push(data.list[i].main.humidity);
-
         }
 
         console.log(foreDates);
         console.log(foreTemps);
         console.log(foreWinds);
         console.log(foreHumidity);
+
+        for (var i = 0; i < 5; i++) {
+            
+          }
 
       });
   }

@@ -44,23 +44,21 @@ body, html {
     position: absolute;
     bottom: 0;
     width: 90%;
-    /* Additional styling like background color, height, etc. */
   }
   
   body {
     margin: 0;
     min-height: 100vh;
     position: relative;
-    padding-bottom: /* Footer height here */;
   }
   
 .container {
     display: flex;
-    min-height: calc(100% - 100px); /* Adjust based on your footer height */
+    min-height: calc(100% - 100px);
 }
 
 aside {
-    width: 200px; /* Adjust as needed */
+    width: 200px; 
     background-image: linear-gradient(5deg, #1973D1 5%, #010280 50%);
     text-align: center;
     color:white;
@@ -108,11 +106,10 @@ footer {
     text-align: center;
 }
 
-
 .weatherCardsContainer {
     display: flex;
-    flex-wrap: wrap; /* This will allow the cards to wrap to the next line if the container is too small */
-    justify-content: space-around; /* This will space the cards evenly */
+    flex-wrap: wrap; 
+    justify-content: space-around; 
   }
   
   .weatherCard {
@@ -120,6 +117,6 @@ footer {
     padding: 10px;
     margin: 10px;
     width: 200px;
-    box-sizing: border-box; /* This ensures that padding and border are included in the width */
+    box-sizing: border-box; 
   }
   

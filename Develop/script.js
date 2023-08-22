@@ -1,9 +1,6 @@
 const btnInput = document.getElementById("search-button");
 btnInput.addEventListener("click", myFunction);
 
-var name = document.querySelector(".name");
-var temp = document.querySelector(".temp");
-var desc = document.querySelector(".desc");
 
 var city = document.getElementById("text-input");
 
@@ -20,17 +17,33 @@ function myFunction() {
     "&appid=" +
     APIKey;
 
+    var name = document.querySelector(".cityName");
+    var temp = document.querySelector(".temp");
+    var windSpeedEl = document.querySelector(".wind");
+    var humidity = document.querySelector(".humidity");
+
+
   function Fetchweather() {
+
     fetch(queryURL)
       .then((response) => response.json())
       .then((data) => {
-        var temperature = data.main.temp;
+        var temperature = data.main.temp - 273.15;
         var cityName = data.name;
         var windSpeed = data.wind.speed;
+        var humidVar = data.main.humidity;
+
+        name.textContent = cityName;
+        temp.textContent = temperature;
+        windSpeedEl.textContent = windSpeed + " mph";
+        humidity.textContent = humidVar + "%";
+
+        
 
         console.log("Temperature:", temperature);
         console.log("City Name:", cityName);
         console.log("Wind Speed:", windSpeed);
+        console.log("humid",humidVar);
       });
   }
   Fetchweather();

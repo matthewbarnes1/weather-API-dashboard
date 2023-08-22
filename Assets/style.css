@@ -10,12 +10,14 @@
     padding:0px;
     display:inline-block;
     flex-wrap:wrap;
+    text-align:center;
 }
 
 header{
     text-align:center;
     background-image: linear-gradient(5deg, #1973D1 5%, #010280 50%);
     height:75px;
+    color:white;
 }
 
 header h1{
@@ -26,9 +28,32 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    color:black;
 }
 
+.today-card{ 
+    text-align:center;
+    margin:5px;
+    border:3px solid grey;
+    height:40%;
+    width:95%;
 
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    /* Additional styling like background color, height, etc. */
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: /* Footer height here */;
+  }
+  
 .container {
     display: flex;
     min-height: calc(100% - 100px); /* Adjust based on your footer height */
@@ -36,14 +61,19 @@ body, html {
 
 aside {
     width: 200px; /* Adjust as needed */
-    background-color: #f0f0f0; /* Optional background color */
+    background-image: linear-gradient(5deg, #1973D1 5%, #010280 50%);
     text-align: center;
+    color:white;
+
 }
+
 
 #search-button{
     margin:5px;
     width:80%;
     height:5%;
+    background-image: linear-gradient(5deg, #1973D1 5%, #010280 50%);
+    color:white;
 
 }
 
@@ -52,6 +82,8 @@ aside {
     width:85%;
     height:5%;
     text-align: center;
+    background-image: linear-gradient(5deg, #1973D1 5%, #010280 50%);
+    color:white;
 
 }
 
@@ -69,6 +101,7 @@ footer {
     margin:10px;
     padding:5px;
     border:3px solid grey;
+    color:black;
 }
 
 .main-card h2{

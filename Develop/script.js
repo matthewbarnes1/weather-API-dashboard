@@ -1,3 +1,8 @@
+setInterval(function () {
+  const time = dayjs().format("MMMM D, YYYY");
+  document.getElementById("timeEl").innerHTML = time;
+}, 1000);
+
 const btnInput = document.getElementById("search-button");
 btnInput.addEventListener("click", myFunction);
 
@@ -44,35 +49,6 @@ function myFunction() {
       "http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
       APIKey;
 
-    fetch(forecastUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        var foreDates = [];
-        var foreTemps = [];
-        var foreWinds = [];
-        var foreHumidity = [];
-
-        for (var i = 0; i < 5; i++) {
-          foreDates.push(data.list[i].dt_txt);
-          foreTemps.push(data.list[i].main.temp);
-          foreWinds.push(data.list[i].wind.speed);
-          foreHumidity.push(data.list[i].main.humidity);
-        }
-
-        foreDates[0];
-        foreTemps[0];
-        foreWinds[0];
-        foreHumidity[0];
-
-        console.log(foreDates);
-        console.log(foreTemps);
-        console.log(foreWinds);
-        console.log(foreHumidity);
-      });
-  }
-  var forecastUrl =
-    "http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
-    APIKey;
   fetch(forecastUrl)
     .then((response) => response.json())
     .then((data) => {
@@ -89,30 +65,21 @@ function myFunction() {
 
         card.innerHTML = `
         <h3>${date}</h3>
-        <p>Temperature: ${temp}°C</p>
+        <p>Temperature: ${(temp-273.15).toFixed(2)}°C</p>
         <p>Wind Speed: ${wind} m/s</p>
         <p>Humidity: ${humidity}%</p>
       `;
 
         weatherCardsContainer.appendChild(card);
+      
       }
     });
 
-  fetchWeather();
-  fetchForecast();
+
 }
-
-// TODO: Upon search button click, save text input to local storage, and, create button element
-// TODO: Create working loop for 5-day-forecast cards
-// TODO: Style. It looks terrible rn.
-// TODO: Icon's dependant on the displayed weather (I think weather api has this)
-// TODO: Style again, again, and again.
-
-// * This function is applying the dayjs time api to html time element (refreshing every 1000ms)
-setInterval(function () {
-  const time = dayjs().format("MMMM D, YYYY");
-  document.getElementById("timeEl").innerHTML = time;
-}, 1000);
+fetchWeather();
+fetchForecast();
+}
 
 //! The below if/else can be used to display alert if input = none;
 //   if (city.value.length == 0) {

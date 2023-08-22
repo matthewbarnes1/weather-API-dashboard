@@ -11,23 +11,39 @@
     <header>
         <h1>Your, weather dashboard</h1>
     </header>
-    <aside>
-        <h3>Search for a city!</h3>
-            <input type="text" id="text-input" placeholder="Toronto"></input>
-            <input type="button" id="search-button" value="Click me"></input>
-    </aside>
     
+        <div class="container">
+            <aside>
+                    <h3>Search for a city!</h3>
+                    <input type="text" id="text-input" placeholder="Toronto"></input>
+                    <input type="button" id="search-button" value="Search"></input>
+                    
+                    <!-- TODO: display: none, until elements get added from history -->
+                    <ul>
+                        <input type="button" class="search-history"></input>
+                    </ul>
+            </aside>
     <main>
-        <div class="main-card">
+        <div class="today-card">
+            <h2 id="timeEl"></h3>
             <h3 class="cityName"></h3>
             <p class="temp"></p>
             <p class="wind"></p>
             <p class="humidity"></p>
         </div>
+
+        <div class="forecast-card">
+            <div class="day-card" id="day1"></div>
+            <div class="day-card" id="day2"></div>
+            <div class="day-card" id="day3"></div>
+            <div class="day-card" id="day4"></div>
+            <div class="day-card" id="day5"></div>
+        </div>
+    </div>
     </main>
-
     <footer></footer>
-
+    
+    <script rel="dayjs-script" src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script rel="local-script" src="./Develop/script.js"></script>
 </body>
 </html>

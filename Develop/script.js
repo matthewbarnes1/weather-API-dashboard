@@ -27,7 +27,7 @@ function grabWeather() {
   function fetchWeather() {
 //* weatherUrl variable concatinates api link, city variable from user input, and apiKey
     var weatherUrl =
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&appid=" +
       APIKey;
@@ -57,7 +57,7 @@ function grabWeather() {
   function fetchForecast() {
 // * This variable holds the forecast API link and concatinates with api key to access
     var forecastUrl =
-      "http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
+      "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" +
       APIKey;
 
 // * This fetch uses the forecasturl api as mentioned above

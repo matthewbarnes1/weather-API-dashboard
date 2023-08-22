@@ -75,3 +75,18 @@ footer {
     text-align: center;
 }
 
+
+.weatherCardsContainer {
+    display: flex;
+    flex-wrap: wrap; /* This will allow the cards to wrap to the next line if the container is too small */
+    justify-content: space-around; /* This will space the cards evenly */
+  }
+  
+  .weatherCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    box-sizing: border-box; /* This ensures that padding and border are included in the width */
+  }
+  
